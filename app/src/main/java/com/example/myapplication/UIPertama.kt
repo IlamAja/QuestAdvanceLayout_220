@@ -159,3 +159,9 @@ fun AktivitasPertama(modifier: Modifier) {
                         color = Color.White,
                         fontFamily = FontFamily.Cursive
                     )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = stringResource(id = R.string.alamat2),
+                        fontSize = 14.sp,
+                        color = Color.White,
+                    )
