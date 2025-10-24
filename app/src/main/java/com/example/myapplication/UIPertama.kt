@@ -165,3 +165,11 @@ fun AktivitasPertama(modifier: Modifier) {
                         fontSize = 14.sp,
                         color = Color.White,
                     )
+                    Text(
+                        text = stringResource(id = R.string.nohp2),
+                        fontSize = 14.sp,
+                        color = Color.White,
+                    )
+                }
+            }
+        }
