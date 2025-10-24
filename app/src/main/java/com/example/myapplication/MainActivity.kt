@@ -29,11 +29,3 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// Tambahkan Preview untuk AktivitasPertama agar bisa dilihat di panel Design
-@Preview(showBackground = true)
-@Composable
-fun AktivitasPertamaPreview() {
-    MyApplicationTheme {
-        AktivitasPertama(Modifier.fillMaxSize())
-    }
-}
