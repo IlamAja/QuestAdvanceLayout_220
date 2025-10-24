@@ -95,4 +95,11 @@ fun AktivitasPertama(modifier: Modifier) {
                     .fillMaxWidth()
                     .padding(16.dp),
                 verticalAlignment = Alignment.CenterVertically
-            ) 
+            ) {
+                val gambar = painterResource(id = R.drawable.umykita)
+                Image(
+                    painter = gambar,
+                    contentDescription = "Logo UMY",
+                    modifier = Modifier.size(48.dp)
+                )
+                
