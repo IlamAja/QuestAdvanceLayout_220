@@ -1,7 +1,10 @@
 package com.example.myapplication
+
 import android.text.Layout
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,64 +22,71 @@ import androidx.compose.ui.unit.sp
 fun AktivitasPertama(modifier: Modifier) {
     Column(
         modifier = Modifier
-            .padding(top = 100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Spacer(modifier = Modifier.height(32.dp))
         Text(
             text = stringResource(id = R.string.prodi),
-            fontSize = 30.sp,
+            fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
         Text(
             text = stringResource(id = R.string.univ),
-            fontSize = 18.sp
+            fontSize = 16.sp
         )
-        Spacer(modifier = Modifier.height(25.dp))
+        Spacer(modifier = Modifier.height(32.dp))
+
         Card(
             modifier = Modifier
-                .fillMaxWidth(fraction = 1f)
-                .padding(all = 12.dp),
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp),
+            shape = RoundedCornerShape(12.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
             )
         ) {
-            Row {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
                 val gambar = painterResource(id = R.drawable.umykita)
                 Image(
                     painter = gambar,
-                    contentDescription = null,
+                    contentDescription = "Logo UMY",
                     modifier = Modifier
-                        .size(100.dp)
-                        .padding(all = 5.dp)
+                        .size(48.dp)
                 )
-                Spacer(modifier = Modifier.width(30.dp))
+                Spacer(modifier = Modifier.width(16.dp))
                 Column {
                     Text(
                         text = stringResource(id = R.string.nama),
-                        fontSize = 30.sp,
-                        fontFamily = FontFamily.Cursive,
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold,
                         color = Color.White,
-                        modifier = Modifier.padding(top = 15.dp)
+                        fontFamily = FontFamily.Cursive
                     )
                     Text(
                         text = stringResource(id = R.string.alamat),
-                        fontSize = 20.sp,
-                        color = Color.Yellow,
-                        modifier = Modifier.padding(top = 15.dp)
+                        fontSize = 14.sp,
+                        color = Color.White,
                     )
                 }
             }
         }
-        Box(
-            modifier = Modifier.fillMaxSize()
-        ){
-            Text(
-                text = stringResource(id = R.string.copyright),
-                modifier = Modifier
-                    .align (Alignment.BottomCenter)
-                    .padding(bottom = 50.dp)
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp),
+            shape = RoundedCornerShape(12.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color(0xFF0056B3)
             )
-        }
-    }
-}
+        ) 
