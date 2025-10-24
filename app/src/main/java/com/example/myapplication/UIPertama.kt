@@ -150,4 +150,12 @@ fun AktivitasPertama(modifier: Modifier) {
                     contentDescription = "Logo UMY",
                     modifier = Modifier.size(48.dp)
                 )
- 
+                Spacer(modifier = Modifier.width(16.dp))
+                Column {
+                    Text(
+                        text = stringResource(id = R.string.nama2),
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White,
+                        fontFamily = FontFamily.Cursive
+                    )
