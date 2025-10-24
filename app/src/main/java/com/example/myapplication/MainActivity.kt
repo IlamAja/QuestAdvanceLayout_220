@@ -29,3 +29,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun AktivitasPertamaPreview() {
+    MyApplicationTheme {
+        AktivitasPertama(Modifier.fillMaxSize())
+    }
+}
